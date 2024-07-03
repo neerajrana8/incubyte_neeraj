@@ -14,7 +14,7 @@ class StringCalculator
     input_array = input_str.split(",").map(&:to_i)
     negative_list =  input_array.select{ |num| num < 0 }
     unless negative_list.empty?
-      raise "Negative number not allowed: #{negative_list.join(",")}"
+      raise "negative numbers not allowed: #{negative_list.join(',')}"
     end
     input_array.sum
   end
