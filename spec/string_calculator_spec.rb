@@ -11,5 +11,13 @@ describe "It should calculate sum of the number in a string" do
       expect(StringCalculator.add("4")).to eq(4)
     end
 
+    it "should return 6 for input 1,5" do
+      expect(StringCalculator.add("1,5")).to eq(6)
+    end
+
+    it "should return sum for string with new line operator" do
+      expect(StringCalculator.add("1\n2,3")).to eq(6)
+    end
+
   end
 end
